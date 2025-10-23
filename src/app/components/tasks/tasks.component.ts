@@ -31,11 +31,16 @@ export class TasksComponent implements OnInit {
   }
 
   addTask(task: Task): void {
-    if(this.enableJsonServerExports) {
+    if (this.enableJsonServerExports) {
       this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
-    }
-    else {
-      this.taskService.addTask(task).subscribe();
+    } else {
+      this.taskService
+        .addTask(task)
+        .subscribe((task) =>
+          this.tasks.findIndex((t) => t.id === task.id) !== -1
+            ? undefined
+            : this.tasks.push(task)
+        );
     }
   }
 }

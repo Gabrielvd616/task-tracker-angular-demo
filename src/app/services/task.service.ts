@@ -20,25 +20,25 @@ export class TaskService implements ITaskService {
   private tasks: Task[] = [
     {
       text: "Doctor's Appointment",
-      day: "2017-06-01T08:30",
+      day: '2017-06-01T08:30',
       reminder: false,
       id: 1,
     },
     {
       text: 'Food Shopping',
-      day: "2017-06-02T12:00",
+      day: '2017-06-02T12:00',
       reminder: true,
       id: 3,
     },
     {
       text: 'Homework',
-      day: "2017-06-03T09:30",
+      day: '2017-06-03T09:30',
       reminder: false,
       id: 4,
     },
     {
       text: 'Review Forms',
-      day: "2022-06-30T15:30",
+      day: '2022-06-30T15:30',
       reminder: true,
       id: 5,
     },

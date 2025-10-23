@@ -11,5 +11,7 @@
       [icon]="faTimes"
     ></fa-icon>
   </h3>
-  <p>{{ task.day.slice(0, (16 &lt; task.day.length) ? 16 : task.day.length).replace("T", " at ") }}</p>
+  <p>
+    {{ task.day.slice(0, (16 &lt; task.day.length) ? 16 : task.day.length).replace("T", " at ") }}
+  </p>
 </div>
