@@ -15,8 +15,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class TaskService implements ITaskService {
-  private apiUrl = 'http://localhost:5000/tasks';
-  private enableJsonServerExports = false;
+  // Interchangeable with 'http://localhost:5154/tasks' for development
+  private apiUrl = 'https://testappservice-c7hafkbcb4fmb7h8.eastus-01.azurewebsites.net/tasks';
+  private enableJsonServerExports = true;
   private tasks: Task[] = [
     {
       text: "Doctor's Appointment",
